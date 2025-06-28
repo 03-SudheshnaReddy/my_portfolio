@@ -11,7 +11,6 @@ import {
     mongodb,
     fake_curren,
     echo,
-    my_portfolio,
     aws,
     html,
     git,
@@ -41,10 +40,7 @@ import python from "../assets/tech/python.webp";
   ];
   
   const services = [
-    {
-      title: "Web Developer",
-      icon: web,
-    },
+    
     {
       title: "Frontend Developer",
       icon: mobile,
@@ -54,8 +50,12 @@ import python from "../assets/tech/python.webp";
       icon: backend,
     },
     {
-      title: "Coder",
+      title: "Problem Solving Enthusiast",
       icon: creator,
+    },
+    {
+      title: "Web3 & ML Explorer",
+      icon: web,
     },
   ];
   
@@ -238,27 +238,7 @@ import python from "../assets/tech/python.webp";
       image: echo,
       source_code_link: "https://github.com/03-SudheshnaReddy/Echo-Chamber-Characterization",
     },
-    {
-      name: "My Portfolio",
-      description:
-        "A responsive, space-themed portfolio built with React, Tailwind CSS, and Framer Motion — designed to reflect creativity and technical depth. Features interactive 3D elements using Three.js, smooth animations, and real-time messaging via EmailJS. A clean, scalable layout that showcases my work, skills, and personality in a visually engaging way.",
-      tags: [
-        {
-          name: "React.js",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Tailwind CSS",
-          color: "pink-text-gradient",
-        },
-        {
-          name: "Three.js",
-          color: "green-text-gradient",
-        },
-      ],
-      image: my_portfolio,
-      source_code_link: "https://github.com/03-SudheshnaReddy/my_portfolio",
-    },
+    
   ];
   
   export { services, technologies, projects };

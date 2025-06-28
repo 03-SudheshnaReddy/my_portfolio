@@ -14,7 +14,6 @@ import tailwind from "./tech/tailwind.png";
 import fake_curren from "./fake_curren.png";
 import chat_app from "./chat_app.png";
 import echo from "./echo.png";
-import my_portfolio from "./my_portfolio.png";
 import aws from "./aws.png";
 import git from "./git.png";
 import html from "./html.png";
@@ -37,7 +36,6 @@ export {
   fake_curren,
   chat_app,
   echo,
-  my_portfolio,
   aws,
   git,
   html,
