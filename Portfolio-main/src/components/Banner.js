@@ -81,7 +81,7 @@ export const Banner = () => {
               </div>
           </Col>
           <Col xs={12} md={6} xl={5}>
-                  <Canvas className="Bannerpi" frameloop='demand'
+                  <Canvas className="Bannerpi" frameloop='always'
       shadows
       dpr={[1, 2]}
       camera={{ position: [-20, 20, 0], fov:100}}

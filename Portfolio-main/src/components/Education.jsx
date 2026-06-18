@@ -1,8 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
+//import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
+//import { textVariant } from "../utils/motion";
 
 const educationData = [
   {
@@ -39,9 +39,9 @@ const educationData = [
 const Education = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <h2 className={`${styles.sectionHeadText} text-center`}>Education</h2>
-      </motion.div>
+      <div>
+         <h2 className={`${styles.sectionHeadText} text-center`}>Education</h2>
+      </div>
 
       <div className="mt-10 relative flex flex-col items-center">
         <div className="absolute w-1 h-full bg-gray-600 left-1/2 transform -translate-x-1/2 z-0" />
