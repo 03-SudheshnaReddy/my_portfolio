@@ -21,7 +21,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
@@ -95,7 +97,30 @@ nav.navbar.scrolled {
   background-color: #050816;
 }
 nav.navbar a.navbar-brand {
-    width: 9%;
+  width: auto;
+}
+
+.brand-home {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.brand-text {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  font-family: "Inter", "Poppins", sans-serif;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -241,27 +266,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-repeat: no-repeat;
 }
 .banner .tagline {
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  background: linear-gradient(90.21deg, rgba(83, 76, 149, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 20px;
+  font-size: 19px;
   margin-bottom: 16px;
   display: inline-block;
   margin-top: 15px;
 }
 .banner h1 {
-  font-size: 65px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1;
-  display: block;
-  margin-bottom: 15px;
+  font-size: 58px;
+  line-height: 1.15;
+  max-width: 950px;
 }
 .banner p {
   color: #B8B8B8;
-  font-size: 18px;
+  font-size: 17px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
@@ -275,10 +297,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   align-items: center;
 }
-
-.txt-rotate > .wrap {
-  border-right: 0.08em solid #666;
+.txt-rotate {
+  display: inline-block;
+  white-space: nowrap;
 }
+.txt-rotate .wrap {
+  white-space: nowrap;
+}
+
 @media (max-width:1200px) {
 	.Bannerp {
 	  display:none;
@@ -289,16 +315,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	  display:none;
 	}
 }
-@media (max-width:770px){
-.banner h1 {
-  font-size: 60px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  display: block;
-}
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  .txt-rotate {
+    white-space: normal;
+  }
 }
 /* === Footer Styles === */
 .footer {

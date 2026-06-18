@@ -55,9 +55,11 @@ const Contact = () => {
   };
 
   return (
-    <div className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}>
-      <div className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
-        <h3 className={styles.sectionHeadText}>Contact me</h3>
+    <div
+  className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-visible items-center justify-center`}
+>
+      <div className="flex-[1.05] bg-black-100 p-8 rounded-2xl max-w-[650px] w-full">
+        <h3 className={`${styles.sectionHeadText} whitespace-nowrap`}>Contact me</h3>
 
         <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-8">
           <label className="flex flex-col">
@@ -108,7 +110,7 @@ const Contact = () => {
         </form>
       </div>
 
-      <div className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
+      <div className="xl:flex-1 xl:h-[600px] md:h-[550px] h-[350px] min-w-[600px]">
         <EarthCanvas />
       </div>
     </div>

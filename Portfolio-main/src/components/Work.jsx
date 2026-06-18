@@ -58,7 +58,9 @@ const Works = () => {
   return (
     <>
       <div>
-        <h2 className={`${styles.sectionHeadText}`}>Projects</h2>
+        <h2 className={`${styles.sectionHeadText}`}>
+  Recent <span className="ml-4">Projects</span>
+</h2>
       </div>
 
       <div className='w-full flex'>

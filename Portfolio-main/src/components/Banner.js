@@ -35,7 +35,7 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const toRotate = [ "Web Developer", "Code Crafter", "Silent Hustler" ];
+  const toRotate = [ "DSA Enthusiast", "Competitive Programmer", "Aspiring Software Developer", "Full Stack Developer"];
   const period = 2000;
 
   useEffect(() => {
@@ -74,20 +74,25 @@ export const Banner = () => {
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
               <div className={"animate__animated animate__fadeIn"}>
-                <span className="tagline">Welcome to my Portfolio</span>
+                <span className="tagline">Engineering Solutions, Debugging Possibilities</span>
                 <h1>{`Hi! I'm Sudheshna`} <br></br><span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Code Crafter", "Silent Hustler" ]'><span className="wrap">{text}</span></span></h1>
                   <p className="Bannerp">I'm a MERN stack web developer with a strong command of JavaScript and hands-on experience in building full-stack applications using MongoDB, Express.js, React, and Node.js. I’m passionate about clean code, intuitive design, and solving real-world problems — not just with web development, but also through my love for data structures and algorithms. Whether it’s crafting scalable solutions or optimizing logic under the hood, I’m always up for a challenge. Let’s build something impactful, one line of code at a time.</p>
                   <button><a href={resume}>Resume<ArrowRightCircle size={25} /></a></button>
               </div>
           </Col>
           <Col xs={12} md={6} xl={5}>
-                  <Canvas className="Bannerpi" frameloop='always'
+                  <Canvas className="Bannerpi" frameloop='demand'
       shadows
-      dpr={[1, 2]}
+      dpr={[1, 1]}
       camera={{ position: [-20, 20, 0], fov:100}}
-      gl={{ preserveDrawingBuffer: true }}>
-                    <OrbitControls autoRotate  maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2} enableZoom={false}/>
+      gl={{ preserveDrawingBuffer: false }}>
+                    <OrbitControls
+                        autoRotate
+                        autoRotateSpeed={2}
+                        maxPolarAngle={Math.PI / 2}
+                        minPolarAngle={Math.PI / 2}
+                        enableZoom={false}
+                      />
                       <ambientLight intensity={0.5}/>
                       <directionalLight position={[-2,5,2]} intensity={1}/>
                       <Suspense fallback={<CanvasLoader/>}>
