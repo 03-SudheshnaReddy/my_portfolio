@@ -19,6 +19,12 @@ import git from "./git.png";
 import html from "./html.png";
 import sql from "./sql.png";
 
+import parkwise from "./parkwise.png";
+import nextflow from "./nextflow.png";
+import career_crawler from "./career_crawler.png";
+import sign_language from "./sign_language.png";
+import ai_interview from "./ai_interview.png";
+import job_portal from "./job_portal.png";
 
 export {
   backend,
@@ -39,6 +45,11 @@ export {
   aws,
   git,
   html,
-  sql
-
+  sql,
+  parkwise,
+  nextflow,
+  career_crawler,
+  sign_language,
+  ai_interview,
+  job_portal
 };

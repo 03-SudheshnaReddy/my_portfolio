@@ -5,16 +5,19 @@ import {
     web,
     javascript,
     reactjs,
-    chat_app,
     tailwind,
     nodejs,
     mongodb,
-    fake_curren,
-    echo,
     aws,
     html,
     git,
     sql,
+    parkwise,
+    nextflow,
+    career_crawler,
+    sign_language,
+    ai_interview,
+    job_portal,
   } from "../assets";
 import ca from "../assets/tech/c++.webp";
 import express from "../assets/tech/express.webp";
@@ -40,21 +43,20 @@ import python from "../assets/tech/python.webp";
   ];
   
   const services = [
-    
     {
-      title: "Frontend Developer",
+      title: "Full-Stack Developer",
       icon: mobile,
     },
     {
-      title: "Backend Developer",
+      title: "Software Engineer",
       icon: backend,
     },
     {
-      title: "Problem Solving Enthusiast",
+      title: "Competitive Programmer",
       icon: creator,
     },
     {
-      title: "Web3 & ML Explorer",
+      title: "Published Researcher",
       icon: web,
     },
   ];
@@ -162,11 +164,11 @@ import python from "../assets/tech/python.webp";
     },
   ];
   
-  const projects = [
+const projects = [
     {
-      name: "ParkWise - Bengaluru Parking Intelligence Platform",
+      name: "ParkWise - Parking Intelligence Platform",
       description:
-        "Built a full-stack parking intelligence platform that turns Bengaluru traffic violation data into actionable congestion insights. The system uses PostGIS geospatial queries, clustering, and forecasting to help identify high-risk parking hotspots through an interactive dashboard.",
+        "ParkWise is a MERN & FastAPI parking intelligence platform that turns traffic violation data into spatial hotspot insights. Employs PostGIS geospatial queries and LightGBM models to predict demand and identify congestion zones via an interactive dashboard.",
       tags: [
         {
           name: "React",
@@ -182,10 +184,14 @@ import python from "../assets/tech/python.webp";
         },
         {
           name: "PostgreSQL",
-          color: "orange-text-gradient",
+          color: "purple-text-gradient",
         },
         {
           name: "PostGIS",
+          color: "cyan-text-gradient",
+        },
+        {
+          name: "LightGBM",
           color: "blue-text-gradient",
         },
         {
@@ -193,22 +199,18 @@ import python from "../assets/tech/python.webp";
           color: "pink-text-gradient",
         },
         {
-          name: "LightGBM",
+          name: "Tailwind",
           color: "green-text-gradient",
         },
-        {
-          name: "Tailwind",
-          color: "yellow-text-gradient",
-        },
       ],
-      image: echo,
+      image: parkwise,
       source_code_link: "https://github.com/03-SudheshnaReddy/ParkWise-Command-Center",
       live_demo_link: "https://park-wise-command-center.vercel.app/landing",
     },
     {
       name: "NextFlow - AI Workflow Automation Platform",
       description:
-        "Created a visual workflow automation platform for building AI-powered pipelines with drag-and-drop nodes. The app uses a DAG execution engine to resolve dependencies, run independent branches efficiently, and connect AI, media, and automation services.",
+        "A visual workflow automation engine for constructing and executing complex multi-step AI pipelines. Uses a Next.js/Prisma DAG execution backend to coordinate sequential/parallel tasks across external models and webhook integrations. The workspace features React Flow for drag-and-drop pipeline orchestration.",
       tags: [
         {
           name: "Next.js",
@@ -224,33 +226,33 @@ import python from "../assets/tech/python.webp";
         },
         {
           name: "Prisma",
-          color: "orange-text-gradient",
+          color: "purple-text-gradient",
         },
         {
           name: "PostgreSQL",
-          color: "blue-text-gradient",
+          color: "cyan-text-gradient",
         },
         {
           name: "React Flow",
-          color: "pink-text-gradient",
+          color: "blue-text-gradient",
         },
         {
           name: "Zustand",
-          color: "green-text-gradient",
+          color: "pink-text-gradient",
         },
         {
           name: "Trigger.dev",
-          color: "yellow-text-gradient",
+          color: "green-text-gradient",
         },
       ],
-      image: web,
+      image: nextflow,
       source_code_link: "https://github.com/03-SudheshnaReddy/NextFlow",
       live_demo_link: "https://next-flow-flame.vercel.app/",
     },
     {
       name: "CareerCrawler - AI Job Finder",
       description:
-        "Developed a job aggregation platform that collects, normalizes, and serves listings from multiple career portals. Automated scraping pipelines feed a REST API, giving users a cleaner way to discover relevant roles from one interface.",
+        "An automated job aggregator that scrapes, normalizes, and indexes listings from multiple portals. Built on Node.js with Puppeteer and Cheerio, it exposes a clean REST API for location and skill-based matching. Features a React client and background scheduler for continuous catalog synchronization.",
       tags: [
         {
           name: "React",
@@ -266,33 +268,33 @@ import python from "../assets/tech/python.webp";
         },
         {
           name: "MongoDB",
-          color: "orange-text-gradient",
-        },
-        {
-          name: "Axios",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Cheerio",
-          color: "pink-text-gradient",
+          color: "purple-text-gradient",
         },
         {
           name: "Puppeteer",
-          color: "green-text-gradient",
+          color: "cyan-text-gradient",
+        },
+        {
+          name: "Cheerio",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Axios",
+          color: "pink-text-gradient",
         },
         {
           name: "REST API",
-          color: "yellow-text-gradient",
+          color: "green-text-gradient",
         },
       ],
-      image: chat_app,
+      image: career_crawler,
       source_code_link: "https://github.com/03-SudheshnaReddy/CareerCrawler",
       live_demo_link: "https://career-crawler-6tga.vercel.app/",
     },
     {
-      name: "Continuous Sign Language Recognition using Deep Learning",
+      name: "Continuous Sign Language Recognition",
       description:
-        "Built a deep learning pipeline for recognizing continuous sign language gestures from video sequences. The project combines computer vision preprocessing with sequence modeling to interpret motion-based gestures more reliably.",
+        "A sequence-to-sequence deep learning pipeline that translates video streams into legible text. Combines OpenCV preprocessing with TensorFlow sequence modeling to recognize continuous gestural motion in real-time. Features frame-by-frame normalizations to stabilize translation outcomes.",
       tags: [
         {
           name: "Python",
@@ -307,21 +309,25 @@ import python from "../assets/tech/python.webp";
           color: "green-text-gradient",
         },
         {
-          name: "Deep Learning",
-          color: "orange-text-gradient",
+          name: "Keras",
+          color: "purple-text-gradient",
         },
         {
-          name: "Computer Vision",
-          color: "green-text-gradient",
+          name: "NumPy",
+          color: "cyan-text-gradient",
+        },
+        {
+          name: "Scikit-Learn",
+          color: "blue-text-gradient",
         },
       ],
-      image: creator,
+      image: sign_language,
       source_code_link: "https://github.com/03-SudheshnaReddy/Continuous-Sign-Language-Recognition-using-Deep-Learning",
     },
     {
       name: "AI Mock Interviews",
       description:
-        "Designed an AI interview preparation platform that simulates technical interview sessions and generates structured feedback. The experience helps users practice answers, review performance, and improve readiness through an interactive web flow.",
+        "An interactive web platform designed to simulate role-specific technical interviews and provide instant feedback using Gemini API. Features real-time speech assessment and secure session management. The backend runs scoring algorithms to yield prepare-ready performance metrics.",
       tags: [
         {
           name: "Next.js",
@@ -336,17 +342,26 @@ import python from "../assets/tech/python.webp";
           color: "green-text-gradient",
         },
         {
-          name: "AI",
-          color: "orange-text-gradient",
+          name: "Tailwind",
+          color: "purple-text-gradient",
+        },
+        {
+          name: "Clerk",
+          color: "cyan-text-gradient",
+        },
+        {
+          name: "PostgreSQL",
+          color: "blue-text-gradient",
         },
       ],
-      image: fake_curren,
+      image: ai_interview,
       source_code_link: "https://github.com/03-SudheshnaReddy/AI-mock-interviews",
+      live_demo_link: "https://mockprepwise.vercel.app/",
     },
     {
       name: "HireLand",
       description:
-        "Developed a full-stack recruitment platform that connects recruiters and candidates through role-based workflows. It supports authentication, job posting, candidate discovery, and application management using a MERN architecture.",
+        "A MERN recruitment portal facilitating secure candidate and recruiter workflows. Uses JWT session authentication, automated resume parsing, and real-time application tracking with email alerts. Features interactive dashboards to organize pipelines and filter applicants.",
       tags: [
         {
           name: "MongoDB",
@@ -362,18 +377,22 @@ import python from "../assets/tech/python.webp";
         },
         {
           name: "Node.js",
-          color: "orange-text-gradient",
+          color: "purple-text-gradient",
         },
         {
           name: "JWT",
-          color: "blue-text-gradient",
+          color: "cyan-text-gradient",
         },
         {
           name: "REST API",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Tailwind",
           color: "pink-text-gradient",
         },
       ],
-      image: backend,
+      image: job_portal,
       source_code_link: "https://github.com/03-SudheshnaReddy/Hire-Land",
     },
   ];

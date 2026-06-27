@@ -114,6 +114,38 @@
   -webkit-text-fill-color: transparent;
 }
 
+.purple-text-gradient {
+  background: #a855f7;
+  background: -webkit-linear-gradient(
+    to top,
+    #7c3aed,
+    #c084fc
+  );
+  background: linear-gradient(
+    to top,
+    #7c3aed,
+    #c084fc
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cyan-text-gradient {
+  background: #06b6d4;
+  background: -webkit-linear-gradient(
+    to top,
+    #0891b2,
+    #22d3ee
+  );
+  background: linear-gradient(
+    to top,
+    #0891b2,
+    #22d3ee
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* canvas- styles */
 .canvas-loader {
   font-size: 10px;
