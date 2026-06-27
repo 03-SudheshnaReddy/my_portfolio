@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavBar } from "./components/NavBar";
 import Experience from './components/Experience';
 import { Banner } from "./components/Banner";
-import Skills from './components/Skills';
+import TechStack from './components/TechStack';
 import About from './components/About';
 import Work from './components/Work';
 import Contact from './components/Contact';
@@ -18,15 +18,16 @@ function App() {
       <NavBar />
       <Banner />
       <About />
-      <Skills />
+      <TechStack />
       <Experience />
       <Work />
 
-      <div className='relative z-0'>
+      <div className="contact-stars-wrapper">
         <Contact />
         <StarsCanvas />
-        <Footer />
       </div>
+
+      <Footer />
     </div>
   );
 }

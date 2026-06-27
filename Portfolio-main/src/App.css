@@ -305,16 +305,33 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   white-space: nowrap;
 }
 
+.contact-stars-wrapper {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.contact-random-stars {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.contact-random-star {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
 @media (max-width:1200px) {
 	.Bannerp {
 	  display:none;
 	}
 }
-@media (max-width:768px) {
-	.Bannerpi {
-	  display:none;
-	}
-}
+
 @media (max-width: 768px) {
   .banner h1 {
     font-size: 38px;

@@ -1,36 +1,10 @@
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-import Model from "./A_windy_day";
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import CanvasLoader from "./Loader";
 import { motion } from "framer-motion";
 import resume from "../assets/sudhi_resume.pdf"
 
 export const Banner = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 991.20px)");
-
-    // Set the initial value of the `isMobile` state variable
-    setIsMobile(mediaQuery.matches);
-
-    // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
-
-    // Add the callback function as a listener for changes to the media query
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-    // Remove the listener when the component is unmounted
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
@@ -79,27 +53,6 @@ export const Banner = () => {
                   <p className="Bannerp">I'm a MERN stack web developer with a strong command of JavaScript and hands-on experience in building full-stack applications using MongoDB, Express.js, React, and Node.js. I’m passionate about clean code, intuitive design, and solving real-world problems — not just with web development, but also through my love for data structures and algorithms. Whether it’s crafting scalable solutions or optimizing logic under the hood, I’m always up for a challenge. Let’s build something impactful, one line of code at a time.</p>
                   <button><a href={resume}>Resume<ArrowRightCircle size={25} /></a></button>
               </div>
-          </Col>
-          <Col xs={12} md={6} xl={5}>
-                  <Canvas className="Bannerpi" frameloop='demand'
-      shadows
-      dpr={[1, 1]}
-      camera={{ position: [-20, 20, 0], fov:100}}
-      gl={{ preserveDrawingBuffer: false }}>
-                    <OrbitControls
-                        autoRotate
-                        autoRotateSpeed={2}
-                        maxPolarAngle={Math.PI / 2}
-                        minPolarAngle={Math.PI / 2}
-                        enableZoom={false}
-                      />
-                      <ambientLight intensity={0.5}/>
-                      <directionalLight position={[-2,5,2]} intensity={1}/>
-                      <Suspense fallback={<CanvasLoader/>}>
-                        <Model isMobile={isMobile}></Model>
-                      </Suspense>
-  
-                  </Canvas>
           </Col>
         </Row>
               </Container>

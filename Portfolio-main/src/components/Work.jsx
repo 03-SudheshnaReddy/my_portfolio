@@ -4,6 +4,29 @@ import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
+import { FiExternalLink } from "react-icons/fi";
+
+const ProjectAction = ({ label, href, children }) => {
+  if (!href) {
+    return null;
+  }
+
+  return (
+    <a
+      href={href}
+      target='_blank'
+      rel='noopener noreferrer'
+      aria-label={label}
+      title={label}
+      className='black-gradient group relative w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+    >
+      {children}
+      <span className='pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-black-100 px-2 py-1 text-[11px] text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
+        {label}
+      </span>
+    </a>
+  );
+};
 
 const ProjectCard = ({
   name,
@@ -11,6 +34,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  live_demo_link,
 }) => {
   return (
     <div className='bg-tertiary p-3 rounded-2xl sm:w-[360px] w-full'>
@@ -20,23 +44,27 @@ const ProjectCard = ({
           alt='project_image'
           className='w-full h-full object-cover rounded-2xl'
         />
-
-        <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-          <div
-            onClick={() => window.open(source_code_link, "_blank")}
-            className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-          >
-            <img
-              src={github}
-              alt='source code'
-              className='w-1/2 h-1/2 object-contain'
-            />
-          </div>
-        </div>
       </div>
 
       <div className='mt-3'>
-        <h3 className='text-white font-bold text-[24px]'>{name}</h3>
+        <div className='flex items-start justify-between gap-3'>
+          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
+          <div className='flex shrink-0 items-center gap-2'>
+            <ProjectAction label='GitHub' href={source_code_link}>
+              <img
+                src={github}
+                alt=''
+                className='w-1/2 h-1/2 object-contain'
+              />
+            </ProjectAction>
+            <ProjectAction label='Live Demo' href={live_demo_link}>
+              <FiExternalLink
+                aria-hidden='true'
+                className='w-1/2 h-1/2 text-white'
+              />
+            </ProjectAction>
+          </div>
+        </div>
         <p className='mt-2 text-secondary text-[14px]'>{description}</p>
       </div>
 
